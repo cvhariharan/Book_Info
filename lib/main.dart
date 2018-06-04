@@ -89,7 +89,7 @@ class _AppState extends State<App>
   {
     scraper.download();
     _scaffoldKey.currentState.showSnackBar(
-        new SnackBar(duration: new Duration(seconds: 4), content:
+        new SnackBar(duration: new Duration(seconds: 8), content:
         new Row(
           children: <Widget>[
             new CircularProgressIndicator(),
@@ -112,10 +112,10 @@ class _AppState extends State<App>
                 padding: const EdgeInsets.all(8.0),
                 child: new Center(child: new Text(book.title, textScaleFactor: 1.6,)),
               ),
-              new Text("Authors - "+book.getAuthors()+"\n", textScaleFactor: 1.2,),
-              new Text("Categories - "+book.getCategories()+"\n", textScaleFactor: 1.2,),
-              new Text("Publisher - "+book.publisher+"\n", textScaleFactor: 1.2,),
-              new Text("Published - "+book.published+"\n", textScaleFactor: 1.2,),
+              (book.getAuthors() != null) ? new Text("Authors - "+book.getAuthors()+"\n", textScaleFactor: 1.2,) : new Container(),
+              (book.getCategories() != null) ? new Text("Categories - "+book.getCategories()+"\n", textScaleFactor: 1.2,) : new Container(),
+              (book.publisher != null) ? Text("Publisher - "+book.publisher+"\n", textScaleFactor: 1.2,) : new Container(),
+              (book.published != null) ? new Text("Published - "+book.published+"\n", textScaleFactor: 1.2,) : new Container(),
               new Text("Description - " + book.description),
               new RaisedButton(onPressed: _downloadPressed, child: new Text("Download"), color: Colors.blueAccent),
             ],
