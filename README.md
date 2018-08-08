@@ -1,6 +1,6 @@
 # book_info
 
-A basic flutter app to download books by scanning the barcodes on books.
+A basic flutter app to download books by scanning the barcodes.
 
 ## Getting Started
 
