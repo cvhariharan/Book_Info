@@ -1,6 +1,6 @@
 # book_info
 
-Scan the barcode to get the info about any book.
+A basic flutter app to download books by scanning the barcodes on books.
 
 ## Getting Started
 
