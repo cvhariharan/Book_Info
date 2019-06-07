@@ -7,3 +7,5 @@ jobs:
       - checkout
       - run: flutter doctor
       - run: flutter -v build apk
+      - store_artifacts:
+        path: /build/app/outputs/apk/debug/app-debug.apk
